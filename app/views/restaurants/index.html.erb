@@ -1,13 +1,14 @@
 <div class="navbar">
-  <h1>Restaurants</h1>
-  <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%>
+  <div class ="container">
+    <h1>Restaurants</h1>
+    <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%>
+  </div>
 </div>
 <br>
 <div class="container">
   <% @restaurants.each do |restaurant| %>
   <div>
     <h2><%= restaurant.name %></h2>
-    <p><%= restaurant.address %></p>
     <p><%= restaurant.category %></p>
     <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
   </div>
